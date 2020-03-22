@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-from dapps.interfaces import AbstractProvider
-from dapps.vpn import facade, status_service, metric_service, certificate_service, config_service, gateway
-from dapps.vpn.controllers import dvpn_config
+from ..interfaces import AbstractProvider
+from . import facade, status_service, metric_service, certificate_service, config_service, gateway
+from .controllers import dvpn_config
 
 class dAppProvider(AbstractProvider):
 	dapp_name = 'VPN'

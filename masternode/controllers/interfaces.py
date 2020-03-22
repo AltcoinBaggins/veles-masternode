@@ -2,7 +2,7 @@
 import asyncio, sys, json, time
 from aiohttp import web
 from abc import ABCMeta, abstractmethod
-import version 		# local modules
+from masternode import version 		# local modules
 
 class AbstractController(object, metaclass=ABCMeta):
 	headers_common = {"Server": "lighttpd/1.4.45"}

@@ -24,7 +24,7 @@ class dAppRegistry(object):
 		modules = {}
 
 		for dapp_name in self.config['dapps'].get('enabled').split(','):
-			modules[dapp_name.strip()] = importlib.import_module("dapps.vpn.provider")
+			modules[dapp_name.strip()] = importlib.import_module("masternode.dapps.vpn.provider")
 			self.register_dapp(modules[dapp_name.strip()].dAppProvider(container))
 
 	def get_all(self):

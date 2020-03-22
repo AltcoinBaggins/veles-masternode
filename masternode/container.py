@@ -1,21 +1,23 @@
 """ Main dependency injection container for Veles Masternode,
     simple declarative container until the projects gets bigger """
 
-import appcontext, appconfig, logging
+import logging
 from dependency_injector import containers, providers
 
-import mnsync_service
-import signing_service
-import remote_gateway
-from blockchain import core_node_service
-from jobs import discovery_daemon, metric_daemon, web_server
-from controllers import masternode_status, masternode_list
-from dapps import registry
+from . import appcontext
+from . import appconfig
+from . import mnsync_service
+from . import signing_service
+from . import remote_gateway
+from .blockchain import core_node_service
+from .jobs import discovery_daemon, metric_daemon, web_server
+from .controllers import masternode_status, masternode_list
+from .dapps import registry
 
 
 class IocContainer(containers.DeclarativeContainer):
     """Application IoC container."""
-    db_type = 'redis'
+    db_type = 'mem'
     config = providers.Configuration('config')
     logger = providers.Singleton(logging.Logger, name='VelesMasternode')
 
@@ -28,7 +30,7 @@ class IocContainer(containers.DeclarativeContainer):
 
     # Gateways, repos
     if db_type == 'redis':
-        from persistence.repository import redis
+        from .persistence.repository import redis
 
         redis_gateway = providers.Singleton(
             redis.RedisGateway,
@@ -45,7 +47,7 @@ class IocContainer(containers.DeclarativeContainer):
             )
         }
     else:
-        from persistence.repository import mem
+        from .persistence.repository import mem
 
         repos = {
             'MasternodeRepository': providers.Singleton(

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 import sys
 
-sys.path.append('/usr/lib/veles/masternode')
+import masternode
 
-from cli import MasternodeJobManagerCLI
+#sys.path.append('/usr/lib/veles/masternode')
+
+from masternode.cli import MasternodeJobManagerCLI
 
 app = MasternodeJobManagerCLI()
 app.run()

@@ -1,5 +1,5 @@
 """ Veles Masternode (gen 2) masternode models """
-from model.interfaces import AbstractFillableObject, AbstractFillableCollection
+from .interfaces import AbstractFillableObject, AbstractFillableCollection
 import copy
 
 class Masternode(AbstractFillableObject):

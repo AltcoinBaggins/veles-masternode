@@ -11,11 +11,11 @@ class ApplicationConfig(ConfigParser):
 		super().__init__(self)
 
 		if not os.path.isfile(filename):
-			raise ValueException('Configuration file not found: ' + filename)
+			raise ValueError('Configuration file not found: ' + filename)
 
 		try:
 			self.read(filename)
 		except:
-			raise ValueException('Error reading configuration file: ' + filename)
+			raise ValueError('Error reading configuration file: ' + filename)
 
 

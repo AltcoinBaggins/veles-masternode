@@ -1,6 +1,6 @@
 """ Veles Masternode (gen 2) sync service """
 
-from model.masternode import MasternodeInfo, MasternodeInfoList
+from .model.masternode import MasternodeInfo, MasternodeInfoList
 
 class MasternodeSyncService(object):
 	"""Service to manage extended masternode sync"""

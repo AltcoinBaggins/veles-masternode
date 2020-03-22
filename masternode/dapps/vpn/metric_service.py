@@ -2,7 +2,7 @@
 
 from datetime import datetime, timedelta
 
-from dapps.interfaces import AbstractGlobalMetricService
+from ..interfaces import AbstractGlobalMetricService
 
 class VPNMetricService(AbstractGlobalMetricService):
 	data_prefix = 'vpn'

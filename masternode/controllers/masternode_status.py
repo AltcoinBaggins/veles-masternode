@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-import asyncio, sys, json, version
-from controllers.interfaces import AbstractSigningController
+import asyncio, sys, json
+
+from .. import version
+from .interfaces import AbstractSigningController
 
 class MasternodeStatusController(AbstractSigningController):
 	def __init__(self, config, logger, signing_service, core_node, dapp_registry):

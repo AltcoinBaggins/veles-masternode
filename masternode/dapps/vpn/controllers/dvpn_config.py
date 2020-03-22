@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-import asyncio, sys, json, version
-from controllers.interfaces import AbstractSigningController
+import asyncio, sys, json
+
+from masternode import version
+from masternode.controllers.interfaces import AbstractSigningController
 
 class ConfigProvisioningController(AbstractSigningController):
 	methods = ['getCertificate', 'getOpenVPNConfig', 'getOpenVPNShieldedConfig', 'getStunnelConfig', 'getStunnelCertificate', 

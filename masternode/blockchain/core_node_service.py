@@ -1,5 +1,5 @@
 """ Module to handle communication with wallet/node daemon """
-from blockchain.core_node_rpc import CoreNodeRPCClient
+from .core_node_rpc import CoreNodeRPCClient
 
 class CoreNodeService(object):
 	""" Service to communicate with the Veles Core daemon """

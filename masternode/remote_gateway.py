@@ -1,6 +1,7 @@
 """ Gateway to communicate with remote masternode """
 import requests, json, time
-import version
+
+from . import version
 
 class MasternodeApiResponse(object):
 	""" Represents a response from Veles Masternode API, returned by

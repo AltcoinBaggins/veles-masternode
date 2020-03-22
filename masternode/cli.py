@@ -1,8 +1,9 @@
 """ Command-line interface to the main masternode app """
 
-import argparse, version
+import argparse
 
-from container import IocContainer
+from . import version
+from .container import IocContainer
 
 class MasternodeJobManagerCLI(object):
 	def run(self):

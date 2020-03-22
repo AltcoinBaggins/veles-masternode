@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from dapps.interfaces import AbstractFacade
+from ..interfaces import AbstractFacade
 
 class VPNdAppFacade(AbstractFacade):
 	app_name = 'VPN'

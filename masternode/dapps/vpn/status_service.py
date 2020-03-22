@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from dapps.interfaces import AbstractStatusService
+from ..interfaces import AbstractStatusService
 
 class VPNStatusService(AbstractStatusService):
 	def __init__(self, config, logger, vpn_gateway, metric_service):
